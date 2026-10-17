@@ -3,6 +3,8 @@ const app = express()
 const db = require('./DB_connect/db')
 const body_parser = require('body-parser')
 const cors = require('cors')
+const dns = require('dns')
+dns.setServers(['1.1.1.1', '8.8.8.8', '8.8.4.4', '1.0.0.1'])
 
 
 const userRoute = require('./Routes/user') // signup login

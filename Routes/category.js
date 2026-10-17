@@ -1,7 +1,7 @@
 const express = require('express')
-const authcheck = require('../middleware/authcheck')
+const authcheck = require('../middleware/authcheck.js')
 const Router = express.Router()
-const categoryModel = require('../Models/categoryModel')
+const categoryModel = require('../Models/categoryModel.js')
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
 

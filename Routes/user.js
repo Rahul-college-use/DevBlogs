@@ -1,5 +1,5 @@
 const express = require('express')
-const userModel = require('../Models/userModel')
+const userModel = require('../Models/userModel.js')
 const mongoose = require('mongoose')
 const Router = express.Router()
 const bcrypt = require('bcrypt')
