@@ -13,7 +13,7 @@ const BlogRoute = require('./Routes/blog')
 const commentRoute = require('./Routes/comment')
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173','https://dev-blogs-mu.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
