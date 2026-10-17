@@ -13,12 +13,13 @@ const BlogRoute = require('./Routes/blog')
 const commentRoute = require('./Routes/comment')
 
 app.use(cors({
-    // origin: ['http://localhost:5173','https://dev-blogs-mu.vercel.app'],
     origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+// Add this line to handle preflight OPTIONS requests explicitly
+app.options('*', cors());
 
 app.use(express.json())
 
