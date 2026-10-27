@@ -47,7 +47,7 @@ Router.get('/', authcheck, async (req, res) => {
     const verify = jwt.verify(authHeader, "SecertKey")
     const userId = verify.userid
 
-    const findOwnPost = await categoryModel.find({ userId })
+    const findOwnPost = await categoryModel.find({ userId} )//
     return res.status(200).json({
         message: "fetch successfully",
         findOwnPost
